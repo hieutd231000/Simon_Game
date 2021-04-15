@@ -22,7 +22,7 @@ $(".btn").click(function(event){
 
 function checkAnswer(currentLevel){
   if(userClickedPattern[currentLevel]===gamePattern[currentLevel]){
-    console.log("success");
+    console.log("Success");
     if(userClickedPattern.length === gamePattern.length){
       console.log("Next sequence");
       setTimeout(function () {
@@ -33,7 +33,7 @@ function checkAnswer(currentLevel){
   else{
     console.log("Wrong");
     makeSound("wrong");
-    $("#level-title").text("Ban la Bo, Nhap 1 phim bat ki de choi lai");
+    $("#level-title").text("Game Over, Press Any Key to Play Again");
     $("body").addClass("game-over");
     setTimeout(function(){
       $("body").removeClass("game-over");
